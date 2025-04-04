@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+:root {
+  /* Tema Claro */
+  --primary-color: #0e2769;
+  /* Azul escuro */
+  --nav-color: #d8d9da;
+  /* Fundo mais escuro para o header claro */
+  --secondary-color: #3B82F6;
+  /* Azul médio */
+  --accent-color: #60A5FA;
+  /* Azul claro */
+  --background-color: #F8FAFC;
+  /* Fundo claro */
+  --text-color: #1E293B;
+  /* Cinza escuro */
+  --text-light-color: #64748B;
+  /* Cinza médio */
+  --border-color: #E2E8F0;
+  /* Cinza claro */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  /* Sombras suaves */
+
+
+  /* Variáveis de fontes */
+  --heading-font: 'Poppins', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  
+  /* Restante das suas variáveis de tema */
+  --primary-color: #1E3A8A;
+  --nav-color: #d8d9da;
+}
+
+[data-theme="dark"] {
+  /* Tema Escuro */
+  --primary-color: #479bfc;
+  /* Azul claro */
+  --nav-color: #1f2127;
+  /* Fundo mais escuro para o header escuro */
+  --secondary-color: #60A5FA;
+  /* Azul médio */
+  --accent-color: #3B82F6;
+  /* Azul vibrante */
+  --background-color: #1E293B;
+  /* Fundo escuro */
+  --text-color: #F8FAFC;
+  /* Branco suave */
+  --text-light-color: #CBD5E1;
+  /* Cinza claro */
+  --border-color: #27303b;
+  /* Cinza médio */
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  /* Sombras sutis */
+}
+
+
+/* Aplicação das fontes nos elementos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+body, p, a, li, button, input, textarea {
+  font-family: var(--body-font);
+}
+
+/* Ajuste específico para o header */
+.header .logo h1 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+.nav-item a {
+  font-family: var(--body-font);
+  font-weight: 500;
+}

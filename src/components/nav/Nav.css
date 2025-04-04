@@ -1,0 +1,281 @@
+/* Estilos para o Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Inicialmente transparente */
+    backdrop-filter: blur(10px); /* Aplica o blur */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: var(--nav-color); /* Cor de fundo ao fazer scroll */
+    backdrop-filter: none; /* Remove o blur ao mostrar a cor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205); /* Mantém a sombra */
+}
+
+/* Outros estilos permanecem os mesmos */
+
+
+
+/* Estilização do botão toggle para o tema com ícones SVG */
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin-left: 1.5rem;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .theme-toggle::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Ícones SVG para sol e lua */
+  .theme-toggle .icon-sun,
+  .theme-toggle .icon-moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    transition: opacity 0.3s ease;
+  }
+  
+  .theme-toggle .icon-sun {
+    right: 8px;
+    opacity: 1;
+  }
+  
+  .theme-toggle .icon-moon {
+    left: 8px;
+    opacity: 0;
+  }
+  
+  /* Estado do botão quando o tema é escuro */
+  .theme-toggle.dark {
+    background-color: var(--nav-color);
+  }
+  
+  .theme-toggle.dark::before {
+    transform: translateX(30px);
+    background-color: var(--accent-color);
+  }
+  
+  .theme-toggle.dark .icon-sun {
+    opacity: 0;
+  }
+  
+  .theme-toggle.dark .icon-moon {
+    opacity: 1;
+  }
+  
+  /* Ajuste para telas menores */
+  @media (max-width: 768px) {
+    .theme-toggle {
+      margin: 2rem auto 0;
+    }
+  }
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    right: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Navegação principal */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-item a:hover {
+    color: var(--accent-color);
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+/* Botão de tema */
+.theme-toggle {
+    transition: 1s;
+    margin-left: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 35px;
+    border-radius: 50px; /* Isso cria o efeito cilíndrico */
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de clique */
+.theme-toggle:active {
+    transform: scale(0.90);
+}
+
+
+.theme-toggle:hover {
+    background-color: var(--border-color);
+}
+
+/* Menu hamburger para mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 16px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1010;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--nav-color);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px var(--shadow-color);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item a {
+        display: block;
+        padding: 0.8rem 0;
+        font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+        margin: 2rem 0 0;
+    }
+}
