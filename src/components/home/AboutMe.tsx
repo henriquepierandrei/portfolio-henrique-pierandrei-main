@@ -1,4 +1,3 @@
-import React from 'react';
 import "./AboutMe.css";
 import { Code, Layout, Users, Database, Server, Globe } from 'lucide-react';
 
