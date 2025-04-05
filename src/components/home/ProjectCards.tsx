@@ -74,7 +74,7 @@ const ProjectCards: React.FC = () => {
   };
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" id='projects'>
       <h2 className="projects-title">Meus Projetos</h2>
       
       <div className="projects-showcase">

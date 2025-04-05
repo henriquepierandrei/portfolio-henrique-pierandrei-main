@@ -82,12 +82,12 @@ const Nav: React.FC<NavProps> = () => {
         {/* Navegação */}
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item"><a href="#inicio">Início</a></li>
-            <li className="nav-item"><a href="#sobre">Sobre mim</a></li>
-            <li className="nav-item"><a href="#experiencias">Experiências</a></li>
-            <li className="nav-item"><a href="#projetos">Projetos</a></li>
+            <li className="nav-item"><a href="#home">Início</a></li>
+            <li className="nav-item"><a href="#about">Sobre mim</a></li>
+            <li className="nav-item"><a href="#experiences">Experiências</a></li>
+            <li className="nav-item"><a href="#projects">Projetos</a></li>
             <li className="nav-item"><a href="#certificacoes">Certificações</a></li>
-            <li className="nav-item"><a href="#habilidades">Habilidades</a></li>
+            <li className="nav-item"><a href="#skills">Habilidades</a></li>
           </ul>
 
           {/* Botão toggle para alternar tema com bolinha animada e ícones SVG */}

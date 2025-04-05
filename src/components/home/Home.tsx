@@ -88,7 +88,7 @@ function Home() {
 
 
   return (
-    <div className="home-container">
+    <div className="home-container" id='home'>
       <Nav />
 
       {/* Container para particles.js */}

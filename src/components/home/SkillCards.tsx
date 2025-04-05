@@ -136,7 +136,7 @@ const SkillCards: React.FC = () => {
   }, []);
   
   return (
-    <div className="skills-section">
+    <div className="skills-section" id='skills'>
       <h2 className="skills-title">Minhas Habilidades</h2>
       <div className="skills-container" ref={scrollContainerRef}>
         <div className="skills-wrapper">
