@@ -49,8 +49,9 @@ function Home() {
 
   // Função para inicializar as partículas com base no tema
   const initParticles = (currentTheme: string) => {
-    const particleColor = currentTheme === 'light' ? '#1f2127' : '#1E293B';
-    const linkColor = currentTheme === 'light' ? '#1f2127' : '#60A5FA';
+    const particleColor = currentTheme === 'light' ? '#1f2127' : '#CBD5E1'; // cor clara no dark
+    const linkColor = currentTheme === 'light' ? '#1f2127' : '#3B82F6'; // azul mais vibrante no dark
+    
 
     window.particlesJS('particles-js', {
       particles: {
@@ -108,7 +109,7 @@ function Home() {
         <p className="portfolio-subtitle">
           <Typewriter
             options={{
-              strings: ['FullStack Developer - Java and React'],
+              strings: ['FullStack Developer - Java & React'],
               autoStart: true,
               loop: true,
               delay: 100,

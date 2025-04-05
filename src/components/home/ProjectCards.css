@@ -1,3 +1,16 @@
+.project-link.disabled-link {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    pointer-events: none;
+    text-decoration: none;
+  }
+  
+  .project-link.disabled-link:hover {
+    background-color: #cccccc;
+    transform: none;
+  }
+
 .projects-container {
     max-width: 1200px;
     margin: 0 auto;

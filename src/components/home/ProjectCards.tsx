@@ -15,47 +15,20 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "Site para ecommerce",
-    description: "Site criado para alavancar e modernizar a forma de vender o produto, demonstrando o poder de alcance de um site digital.",
-    technologies: ["React", "TypeScript", "UI/UI", "Vercel"],
+    description: "Site criado para alavancar e modernizar a forma de vender o produto, tendo seu negócio online você é capaz de vender muito mais e crescer também.",
+    technologies: ["React", "TypeScript", "UX/UI", "Vercel"],
     image: "https://res.cloudinary.com/dvadwwvub/image/upload/v1743796378/AcougueOpcaoDaCarne/nf5dbbi7y37stfpcqfvw.png",
     demoUrl: "https://www.acougueopcaodacarne.shop/",
     repoUrl: ""
   },
   {
     id: 2,
-    title: "App de Controle Financeiro",
-    description: "Aplicativo móvel para acompanhamento de despesas e receitas com gráficos e categorização inteligente.",
-    technologies: ["React Native", "TypeScript", "Firebase"],
-    image: "https://via.placeholder.com/800x600/3B82F6/FFFFFF?text=Finance+App",
-    demoUrl: "https://finance-app.exemplo.com",
-    repoUrl: "https://github.com/seuusuario/finance-app"
-  },
-  {
-    id: 3,
-    title: "E-commerce Responsivo",
-    description: "Plataforma de comércio eletrônico completa com catálogo de produtos, carrinho e sistema de pagamento.",
-    technologies: ["React", "Node.js", "MongoDB", "Docker"],
-    image: "https://via.placeholder.com/800x600/60A5FA/FFFFFF?text=E-commerce",
-    demoUrl: "https://ecommerce.exemplo.com",
-    repoUrl: "https://github.com/seuusuario/ecommerce-platform"
-  },
-  {
-    id: 4,
-    title: "Dashboard Analítico",
-    description: "Interface de visualização de dados com gráficos interativos e relatórios personalizáveis.",
-    technologies: ["React", "D3.js", "Python", "Flask"],
-    image: "https://via.placeholder.com/800x600/0e2769/FFFFFF?text=Analytics+Dashboard",
-    demoUrl: "https://analytics.exemplo.com",
-    repoUrl: "https://github.com/seuusuario/analytics-dashboard"
-  },
-  {
-    id: 5,
-    title: "Sistema de Gestão de Tarefas",
-    description: "Aplicativo para organização de projetos e tarefas com funcionalidades de drag-and-drop e notificações.",
-    technologies: ["Java", "JavaFX", "PostgreSQL"],
-    image: "https://via.placeholder.com/800x600/3B82F6/FFFFFF?text=Task+Manager",
-    demoUrl: "https://tasks.exemplo.com",
-    repoUrl: "https://github.com/seuusuario/task-manager"
+    title: "App de automação e geração de notas fiscais",
+    description: "App criado no intuito de minimizar ao máximo, tempo e erros no momento de criar e calcular a carga no momento da venda.",
+    technologies: ["Java", "JavaFX", "ItextPDF", "SQL", "UX/UI"],
+    image: "https://res.cloudinary.com/dvadwwvub/image/upload/v1743871808/d2rpcdgbhukermxqh5zf.png",
+    demoUrl: "",
+    repoUrl: ""
   }
 ];
 
@@ -72,6 +45,32 @@ const ProjectCards: React.FC = () => {
 
   const goToProject = (index: number) => {
     setActiveProject(index);
+  };
+
+  // Helper function to render project links
+  const renderProjectLink = (url: string, label: string, className: string) => {
+    if (!url || url.trim() === '') {
+      return (
+        <button 
+          className={`${className} disabled-link`} 
+          disabled
+          title="Link indisponível"
+        >
+          {label}
+        </button>
+      );
+    }
+    
+    return (
+      <a 
+        href={url} 
+        className={className} 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        {label}
+      </a>
+    );
   };
 
   return (
@@ -99,12 +98,16 @@ const ProjectCards: React.FC = () => {
             </div>
             
             <div className="project-links">
-              <a href={projectsData[activeProject].demoUrl} className="project-link demo-link" target="_blank" rel="noopener noreferrer">
-                Ver Demo
-              </a>
-              <a href={projectsData[activeProject].repoUrl} className="project-link repo-link" target="_blank" rel="noopener noreferrer">
-                Código
-              </a>
+              {renderProjectLink(
+                projectsData[activeProject].demoUrl, 
+                "Ver Demo", 
+                "project-link demo-link"
+              )}
+              {renderProjectLink(
+                projectsData[activeProject].repoUrl, 
+                "Código", 
+                "project-link repo-link"
+              )}
             </div>
           </div>
         </div>
