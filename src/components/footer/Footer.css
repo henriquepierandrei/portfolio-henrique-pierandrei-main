@@ -1,0 +1,18 @@
+.footer-container-principal{
+    width: 100%;
+    height: auto;
+    padding: 30px 0px 20px 0px;
+    color: var(--background-color);
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    text-align: center;
+
+}
+
+@media (max-width: 768px){
+    .footer-container-principal{
+        font-size: 0.8rem;
+        padding: 20px 5px 10px 5px;
+
+    }
+}

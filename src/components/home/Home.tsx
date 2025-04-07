@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import AboutMe from './AboutMe';
 import SkillCards from './SkillCards';
 import ProjectCards from './ProjectCards';
+import Footer from '../footer/Footer';
 
 
 // Define particlesJS para evitar erro no TypeScript
@@ -122,7 +123,8 @@ function Home() {
       <AboutMe />
       <SkillCards />
       <ProjectCards />
-        
+      <br />
+      <Footer />
     </div>
   );
 }
