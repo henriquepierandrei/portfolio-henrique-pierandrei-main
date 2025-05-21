@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {Box, Computer, Home, Keyboard, PaintBucket} from 'lucide-react';
+import {Box, Computer, Keyboard, PaintBucket} from 'lucide-react';
 
 interface StatItem {
   value: number;
