@@ -38,6 +38,7 @@
     border-radius: 12px;
     box-shadow: var(--box-shadow);
     overflow: hidden;
+    height: auto;
     width: 100%;
     max-width: 800px;
     transition: transform 0.3s ease;
@@ -89,7 +90,7 @@
 }
 
 .tech-badge {
-    background-color: #eef2ff;
+    background-color: var(--shadow-color);
     color: #3b82f6;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;

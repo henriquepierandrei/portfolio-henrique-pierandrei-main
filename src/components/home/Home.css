@@ -13,10 +13,34 @@
     height: 100vh;
     z-index: 1;
 }
+.section1 {
+  height: 300px;
+  background-color: #3498db; /* azul */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2 {
+  height: 300px;
+  background-color: #2ecc71; /* verde */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-transition {
+  height: 40px; /* altura da faixa de transição */
+  background: linear-gradient(to bottom, var(--background-color), var(--background-color));
+}
+
 
 /* Gradiente de fundo que muda com os temas */
 #particles-js {
-    background: linear-gradient(135deg, var(--border-color) 0%, var(--nav-color) 100%);
+    cursor: pointer;
+  background: linear-gradient(to bottom, var(--border-color), var(--background-color));
 }
 
 /* Conteúdo do hero */

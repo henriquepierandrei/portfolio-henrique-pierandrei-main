@@ -29,6 +29,15 @@ const projectsData: Project[] = [
     image: "https://res.cloudinary.com/dvadwwvub/image/upload/v1743871808/d2rpcdgbhukermxqh5zf.png",
     demoUrl: "",
     repoUrl: ""
+  },
+  {
+    id: 2,
+    title: "API focada em 2FA para softwares de terceiros",
+    description: "Api criada para facilitar a implementação de autenticação em dois fatores, com o intuito de aumentar a segurança do usuário.",
+    technologies: ["Java", "SpringBoot", "React", "JavaMailSender", "Thymeleaf"],
+    image: "https://res.cloudinary.com/dvadwwvub/image/upload/v1747849403/2_usspcf.png",
+    demoUrl: "https://2-fa-front-end-8kyf.vercel.app",
+    repoUrl: ""
   }
 ];
 

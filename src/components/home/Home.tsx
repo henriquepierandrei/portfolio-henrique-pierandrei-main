@@ -48,11 +48,14 @@ function Home() {
     }
   }, [theme]);
 
+
+
+
   // Função para inicializar as partículas com base no tema
   const initParticles = (currentTheme: string) => {
     const particleColor = currentTheme === 'light' ? '#1f2127' : '#CBD5E1'; // cor clara no dark
     const linkColor = currentTheme === 'light' ? '#1f2127' : '#3B82F6'; // azul mais vibrante no dark
-    
+
 
     window.particlesJS('particles-js', {
       particles: {
@@ -93,7 +96,7 @@ function Home() {
       <Nav />
 
       {/* Container para particles.js */}
-      <div id="particles-js" className="particles-container" style={{cursor: "pointer"}}></div>
+      <div id="particles-js" className="particles-container" style={{ cursor: "pointer" }}></div>
 
       <div className="hero-content">
         <h1 className="name-title">
@@ -102,8 +105,8 @@ function Home() {
               strings: ['Henrique Pierandrei'],
               autoStart: true,
               loop: true,
-              delay: 100,
-              deleteSpeed: 200,
+              delay: 300,
+              deleteSpeed: 300,
             }}
           />
         </h1>
@@ -113,15 +116,18 @@ function Home() {
               strings: ['FullStack Developer - Java & React'],
               autoStart: true,
               loop: true,
-              delay: 100,
-              deleteSpeed: 200,
+              delay: 200,
+              deleteSpeed: 250,
             }}
           />
         </p>
 
       </div>
+      <section className="gradient-transition"></section>
+
       <AboutMe />
       <SkillCards />
+
       <ProjectCards />
       <br />
       <Footer />

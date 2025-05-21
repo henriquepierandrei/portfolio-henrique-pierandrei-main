@@ -46,21 +46,21 @@ body {
   /* Tema Escuro */
   --primary-color: #479bfc;
   /* Azul claro */
-  --nav-color: #1f2127;
+  --nav-color: #292a2c;
   /* Fundo mais escuro para o header escuro */
   --secondary-color: #60A5FA;
   /* Azul médio */
   --accent-color: #3B82F6;
   /* Azul vibrante */
-  --background-color: #1E293B;
+  --background-color: #131414;
   /* Fundo escuro */
-  --text-color: #F8FAFC;
+  --text-color: #ffffff;
   /* Branco suave */
-  --text-light-color: #CBD5E1;
+  --text-light-color: #e0e8f1;
   /* Cinza claro */
-  --border-color: #27303b;
+  --border-color: #1e2024;
   /* Cinza médio */
-  --shadow-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(255, 255, 255, 0.055);
   /* Sombras sutis */
 }
 
