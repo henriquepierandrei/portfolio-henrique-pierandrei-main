@@ -6,6 +6,7 @@ import AboutMe from './AboutMe';
 import SkillCards from './SkillCards';
 import ProjectCards from './ProjectCards';
 import Footer from '../footer/Footer';
+import StatsCounter from './StatsCounter';
 
 
 // Define particlesJS para evitar erro no TypeScript
@@ -127,7 +128,7 @@ function Home() {
 
       <AboutMe />
       <SkillCards />
-
+      <StatsCounter />
       <ProjectCards />
       <br />
       <Footer />
