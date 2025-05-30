@@ -8,13 +8,25 @@
     backdrop-filter: blur(10px); /* Aplica o blur */
     z-index: 1000;
     transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
 
 .header.scrolled {
-    background-color: var(--nav-color); /* Cor de fundo ao fazer scroll */
-    backdrop-filter: none; /* Remove o blur ao mostrar a cor */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205); /* Mantém a sombra */
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 95%;
+    background-color: var(--background-color); /* Cor do fundo quando rola */
+    border-color: var(--border-color);
+    border-radius: 20px;
+    backdrop-filter: none;
+    font-size: 0.8rem;
+    z-index: 1000; /* para ficar acima de outros elementos */
 }
+
+
 
 /* Outros estilos permanecem os mesmos */
 
@@ -247,7 +259,7 @@
         width: 70%;
         max-width: 300px;
         height: 100vh;
-        background-color: var(--nav-color);
+        background-color: var(--background-color);
         flex-direction: column;
         padding: 80px 20px 20px;
         transition: right 0.3s ease;

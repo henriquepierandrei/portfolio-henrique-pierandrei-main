@@ -1,10 +1,36 @@
-
 .skills-section {
-    padding: 2rem 0;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text-color);
+
+  background-image:
+    linear-gradient(to top, var(--background-color), transparent 100px),   /* gradiente inferior para cima */
+    linear-gradient(to bottom, var(--background-color), transparent 100px),/* gradiente superior para baixo */
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),     /* grade vertical */
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);    /* grade horizontal */
+
+  background-size:
+    100% 100px,    /* tamanho do gradiente inferior */
+    100% 100px,    /* tamanho do gradiente superior */
+    40px 40px,     /* tamanho grade vertical */
+    40px 40px;     /* tamanho grade horizontal */
+
+  background-position:
+    bottom,        /* gradiente inferior fica embaixo */
+    top,           /* gradiente superior fica em cima */
+    0 0,           /* grade vertical */
+    0 0;           /* grade horizontal */
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat,
+    repeat;
 }
+
 
 .skills-title {
     font-family: var(--heading-font);
