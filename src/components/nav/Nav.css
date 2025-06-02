@@ -8,7 +8,7 @@
     backdrop-filter: blur(10px); /* Aplica o blur */
     z-index: 1000;
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 }
 
 .header.scrolled {
@@ -21,8 +21,9 @@
     background-color: var(--background-color); /* Cor do fundo quando rola */
     border-color: var(--border-color);
     border-radius: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.11);
     backdrop-filter: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     z-index: 1000; /* para ficar acima de outros elementos */
 }
 
